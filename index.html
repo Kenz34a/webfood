@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm Kiếm Món Ăn</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>🌍 Công Thức Món Ăn Thế Giới</h1>
+        <p>Nhấn vào món để xem công thức — Tìm kiếm món ăn bên dưới:</p>
+        <input type="text" id="searchBox" placeholder="🔍 Nhập tên món ăn..." oninput="filterRecipes()" />
+        <button id="toggleDarkMode">🌓 Đổi chế độ</button>
+    </header>
+
+    <main id="allRecipes">
+        <!-- 🇻🇳 Món Việt Nam -->
+        <section class="country-section">
+            <h2>🇻🇳 Món Việt Nam</h2>
+            <div class="recipe-list">
+
+                <div class="recipe-card" data-name="phở bò" onclick="toggleRecipe(this)">
+                    <img src="https://media.istockphoto.com/id/1299419373/vi/anh/pho-bo-vietnamese-soup.jpg?s=612x612&w=0&k=20&c=MTp9dmYOEV33fM8QD2XV0uHCerBdyZpCsm59TyLHSSc=" alt="Phở Bò">
+                    <h3>Phở Bò</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>500g thịt bò</li>
+                            <li>Bánh phở</li>
+                            <li>Hành, gừng, quế, hồi</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Nướng hành, gừng.</li>
+                            <li>Hầm xương lấy nước dùng.</li>
+                            <li>Chần bánh phở, chan nước dùng, thêm thịt bò.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-name="bánh xèo" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2020/12/CookProduct/11-1200x676.jpg" alt="Bánh Xèo">
+                    <h3>Bánh Xèo</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Bột bánh xèo</li>
+                            <li>Tôm, thịt, giá đỗ</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Trộn bột, đổ bánh, chiên giòn.</li>
+                            <li>Ăn kèm rau sống và nước mắm chua ngọt.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-name="bún chả" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2020/12/CookProduct/1200-1200x676-1.jpg" alt="Bún Chả">
+                    <h3>Bún Chả</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Thịt nướng</li>
+                            <li>Bún tươi, rau sống</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Nướng thịt, pha nước mắm chua ngọt.</li>
+                            <li>Ăn kèm bún và rau sống.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-name="gỏi cuốn" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2020/12/CookProduct/1200-1200x676-2.jpg" alt="Gỏi Cuốn">
+                    <h3>Gỏi Cuốn</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Bánh tráng</li>
+                            <li>Tôm, thịt, rau sống</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Cuốn tôm, thịt và rau trong bánh tráng.</li>
+                            <li>Chấm nước mắm chua ngọt.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-name="cơm tấm" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2020/12/CookProduct/1200-1200x676-3.jpg" alt="Cơm Tấm">
+                    <h3>Cơm Tấm</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Cơm tấm</li>
+                            <li>Sườn nướng, bì, chả</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Nướng sườn, chiên chả.</li>
+                            <li>Ăn kèm với cơm và nước mắm.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-name="bánh mì" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2020/12/CookProduct/1200-1200x676-4.jpg" alt="Bánh Mì">
+                    <h3>Bánh Mì</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Bánh mì</li>
+                            <li>Thịt nguội, chả lụa, rau sống</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Cho nhân vào bánh mì.</li>
+                            <li>Ăn kèm với dưa leo và ớt.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-name="cháo lòng" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2020/12/CookProduct/1200-1200x676-5.jpg" alt="Cháo Lòng">
+                    <h3>Cháo Lòng</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Gạo, lòng heo</li>
+                            <li>Hành, tiêu, ớt</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Nấu cháo với lòng heo.</li>
+                            <li>Thêm hành và tiêu khi ăn.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-name="bánh cuốn" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2020/12/CookProduct/1200-1200x676-6.jpg" alt="Bánh Cuốn">
+                    <h3>Bánh Cuốn</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Bột gạo</li>
+                            <li>Thịt băm, nấm hương</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Hấp bánh, cho nhân vào.</li>
+                            <li>Ăn kèm nước mắm và rau sống.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-name="bánh bao" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2020/12/CookProduct/1200-1200x676-7.jpg" alt="Bánh Bao">
+                    <h3>Bánh Bao</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Bột mì</li>
+                            <li>Thịt heo, trứng, nấm</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Nhào bột, cho nhân vào.</li>
+                            <li>Hấp bánh cho chín.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-name="bánh tráng trộn" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2020/12/CookProduct/1200-1200x676-8.jpg" alt="Bánh Tráng Trộn">
+                    <h3>Bánh Tráng Trộn</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Bánh tráng</li>
+                            <li>Trứng cút, rau răm, đậu phộng</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Trộn bánh tráng với các nguyên liệu.</li>
+                            <li>Thêm nước mắm và ớt.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-name="súp cua" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2020/12/CookProduct/1200-1200x676-9.jpg" alt="Súp Cua">
+                    <h3>Súp Cua</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Cua biển</li>
+                            <li>Trứng, bột năng, nấm</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Nấu cua với nước dùng.</li>
+                            <li>Thêm trứng và bột năng để tạo độ sánh.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-name="bánh mì kẹp thịt" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2020/12/CookProduct/1200-1200x676-10.jpg" alt="Bánh Mì Kẹp Thịt">
+                    <h3>Bánh Mì Kẹp Thịt</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Bánh mì</li>
+                            <li>Thịt heo, dưa leo, rau sống</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Nướng thịt, cắt bánh mì.</li>
+                            <li>Cho thịt và rau vào bánh mì.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-name="chè bà ba" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2020/12/CookProduct/1200-1200x676-11.jpg" alt="Chè Bà Ba">
+                    <h3>Chè Bà Ba</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Đậu xanh, nước cốt dừa</li>
+                            <li>Đường, bột năng</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Nấu đậu xanh với nước cốt dừa.</li>
+                            <li>Thêm đường và bột năng để tạo độ sánh.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-name="bánh pía" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2020/12/CookProduct/1200-1200x676-12.jpg" alt="Bánh Pía">
+                    <h3>Bánh Pía</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Bột mì, đậu xanh</li>
+                            <li>Thịt mỡ, trứng muối</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Nhào bột, cho nhân vào.</li>
+                            <li>Nướng bánh cho chín vàng.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-name="bánh canh" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2021/03/CookProduct/1200-1200x676-50.jpg" alt="Bánh Canh">
+                    <h3>Bánh Canh</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Bánh canh, tôm, cua</li>
+                            <li>Gia vị: muối, tiêu, hành</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Nấu nước dùng với tôm, cua.</li>
+                            <li>Cho bánh canh vào nấu chín.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card" data-name="bánh bèo" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2021/03/CookProduct/1200-1200x676-51.jpg" alt="Bánh Bèo">
+                    <h3>Bánh Bèo</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Bột gạo, tôm, thịt băm</li>
+                            <li>Hành phi, nước mắm</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Hấp bánh từ bột gạo.</li>
+                            <li>Cho nhân tôm, thịt lên trên và rưới nước mắm.</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 🇯🇵 Món Nhật -->
+        <section class="country-section">
+            <h2>🇯🇵 Món Nhật</h2>
+            <div class="recipe-list">
+
+                <div class="recipe-card" data-name="ramen" onclick="toggleRecipe(this)">
+                    <img src="https://cdn.tgdd.vn/2021/03/CookProduct/1200-1200x676-49.jpg" alt="Ramen">
+                    <h3>Ramen</h3>
+                    <div class="recipe-detail">
+                        <h4>🍽 Nguyên liệu:</h4>
+                        <ul>
+                            <li>Mì ramen</li>
+                            <li>Trứng lòng đào, nước dùng</li>
+                        </ul>
+                        <h4>👨‍🍳 Cách làm:</h4>
+                        <ol>
+                            <li>Nấu nước dùng, luộc trứng.</li>
+                            <li>Chần mì và trang trí topping.</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Công Thức Món Ăn</p>
+    </footer>
+
+    <script>
+        function toggleRecipe(card) {
+            const detail = card.querySelector('.recipe-detail');
+            detail.style.display = (detail.style.display === 'block') ? 'none' : 'block';
+        }
+
+        function filterRecipes() {
+            const keyword = document.getElementById('searchBox').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.recipe-card');
+
+            cards.forEach(card => {
+                const name = card.dataset.name.toLowerCase();
+                if (name.includes(keyword)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+    </script>
+    <script>
+        // Toggle mở rộng
+        function toggleRecipe(card) {
+            const detail = card.querySelector('.recipe-detail');
+            detail.style.display = (detail.style.display === 'block') ? 'none' : 'block';
+        }
+
+        // Tìm kiếm
+        function filterRecipes() {
+            const keyword = document.getElementById('searchBox').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.recipe-card');
+            cards.forEach(card => {
+                const name = card.dataset.name.toLowerCase();
+                card.style.display = name.includes(keyword) ? "block" : "none";
+            });
+        }
+
+        // Dark mode toggle
+        const toggleBtn = document.getElementById('toggleDarkMode');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+
+            // (Tuỳ chọn) lưu chế độ
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        });
+
+        // (Tuỳ chọn) giữ chế độ khi reload
+        window.addEventListener('load', () => {
+            const saved = localStorage.getItem('darkMode') === 'true';
+            if (saved) document.body.classList.add('dark-mode');
+        });
+    </script>
+
+</body>
+
+</html>
